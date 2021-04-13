@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dd000000"
+    tools:context=".selectmedia.SelectMediaActivity">
+
+    <com.glitchcam.vepromei.edit.view.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_select_media"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/dd000000"
+        app:tabIndicatorColor="@color/ff4a90e2"
+        app:tabSelectedTextColor="@color/ffffffff"
+        app:tabTextColor="@color/bezier_bg"
+        app:tabTextAppearance="@style/tabLayoutTextStyle" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/dd000000">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_select_media"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="vertical"
+                android:background="@color/ff1a1d24">
+
+                <TextView
+                    android:id="@+id/tv_selected_medias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/bezier_bg"
+                    android:textSize="16sp"
+                    android:text="4 videos selected"/>
+
+                <com.glitchcam.vepromei.edit.grallyRecyclerView.SpeedRecyclerView
+                    android:id="@+id/selectedMediaRecycleer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="8dp"
+                    android:requiresFadingEdge="horizontal"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floasting_next"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="128dp"
+            app:borderWidth="0dp"
+            app:srcCompat="@drawable/ic_left"
+            android:backgroundTint="@color/trim_edit_replace_text_color"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

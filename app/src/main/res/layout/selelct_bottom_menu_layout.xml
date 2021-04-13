@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ff1a1d24">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/select_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/next_button">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/next_button"
+        android:layout_width="@dimen/next_button_width"
+        android:layout_height="@dimen/next_button_height"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/msff2a7dff"
+        android:gravity="center"
+        android:text="@string/next_button_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/next_button_text_size" />
+</RelativeLayout>

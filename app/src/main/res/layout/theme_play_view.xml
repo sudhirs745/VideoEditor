@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="54dp">
+
+    <ImageView
+        android:id="@+id/theme_iv_play"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:layout_marginStart="@dimen/dp25"
+        android:layout_marginLeft="@dimen/dp25"
+        android:padding="@dimen/dp5"
+        android:src="@mipmap/theme_view_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/theme_tv_now_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp5"
+        android:layout_marginLeft="@dimen/dp5"
+        android:gravity="center_vertical"
+        android:minWidth="@dimen/dp20"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/theme_iv_play"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/theme_tv_all_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp7p5"
+        android:layout_marginLeft="@dimen/dp7p5"
+        android:layout_marginEnd="@dimen/dp30"
+        android:layout_marginRight="@dimen/dp30"
+        android:gravity="center_vertical"
+        android:minWidth="@dimen/dp30"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.glitchcam.vepromei.view.ThemeProgress
+        android:id="@+id/theme_time_progress"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@+id/theme_tv_all_time"
+        app:layout_constraintStart_toEndOf="@+id/theme_tv_now_time"
+        app:layout_constraintTop_toTopOf="parent"
+        app:progress2BackGround="@color/white"
+        app:progress2ForwardGround="#4A90E2"
+        app:progress2WidthMagic="1dp"
+        app:thumb2Color="#4A90E2"
+        app:thumb2Radios="@dimen/dp3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

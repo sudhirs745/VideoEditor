@@ -1,0 +1,289 @@
+apply plugin: 'com.android.application'
+
+def extraLibPath = meisheSdkExtraPath(rootDir)
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.glitchcam.vepromei"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        ndk {
+            abiFilters "armeabi-v7a"  // 指定要ndk需要兼容的架构(这样其他依赖包里mips,x86,armeabi,arm-v8之类的so会被过滤掉)
+        }
+        flavorDimensions "versionCode"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            applicationIdSuffix "videoshow"
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"MS\""
+            buildConfigField("int", "FACE_MODEL", "106")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release_MS_ST_106 {
+            applicationIdSuffix "normal106"
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"MS_ST\""
+            buildConfigField("int", "FACE_MODEL", "106")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release_MS_ST_240 {
+            applicationIdSuffix "videoshow"
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"MS_ST\""
+            buildConfigField("int", "FACE_MODEL", "240")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release_faceU {
+            applicationIdSuffix "videoshow"
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"FaceU\""
+            buildConfigField("int", "FACE_MODEL", "106")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release_MS_ST_SUPER {
+            applicationIdSuffix "senior106"
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"MS_ST_SUPER\""
+            buildConfigField("int", "FACE_MODEL", "106")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            applicationIdSuffix "videoshow"
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"MS\""
+            buildConfigField("int", "FACE_MODEL", "106")
+            minifyEnabled false
+            buildConfigField "Boolean", "PRINT_LOG", "true"
+            signingConfig signingConfigs.debug
+            debuggable true
+        }
+        debug_MS_ST_106 {
+            applicationIdSuffix "normal106"
+            buildConfigField("int", "FACE_MODEL", "106")
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"MS_ST\""
+            minifyEnabled false
+            buildConfigField "Boolean", "PRINT_LOG", "true"
+            signingConfig signingConfigs.debug
+            debuggable true
+        }
+        debug_MS_ST_240 {
+            applicationIdSuffix "videoshow"
+            buildConfigField("int", "FACE_MODEL", "240")
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"MS_ST\""
+            minifyEnabled false
+            buildConfigField "Boolean", "PRINT_LOG", "true"
+            signingConfig signingConfigs.debug
+            debuggable true
+        }
+        debug_faceU {
+            applicationIdSuffix "videoshow"
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"FaceU\""
+            buildConfigField("int", "FACE_MODEL", "106")
+            minifyEnabled false
+            buildConfigField "Boolean", "PRINT_LOG", "true"
+            signingConfig signingConfigs.debug
+            debuggable true
+        }
+        debug_MS_ST_SUPER {
+            applicationIdSuffix "senior106"
+            buildConfigField "String", "HUMAN_AI_TYPE", "\"MS_ST_SUPER\""
+            buildConfigField("int", "FACE_MODEL", "106")
+            minifyEnabled false
+            buildConfigField "Boolean", "PRINT_LOG", "true"
+            signingConfig signingConfigs.debug
+            debuggable true
+        }
+
+        debug {
+            packagingOptions {
+                doNotStrip '**.so'
+            }
+        }
+    }
+
+    task libCopy(type: Copy) {
+        copy {
+            from extraLibPath + 'lib/android_armv7'
+            into 'src/main/jniLibs/armeabi-v7a'
+            include '*.so'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs './libs', '../../../../extrasdk', extraLibPath + 'extrasdk/sdk/android'
+        }
+    }
+    productFlavors {
+        _360 {}
+        tencent {}
+        baidu {}
+        oppo {}
+        vivo {}
+        huawei {}
+        xiaomi {}
+        googleplay {}
+    }
+    productFlavors.all {
+            //批量修改，类似一个循序遍历
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+    //对生成的apk进行一些简单的配置
+    applicationVariants.all { variant ->
+//        debug_MS_ST_SUPER
+//        debug
+//        release_MS_ST_240
+//        debug_MS_ST_240
+//        release
+//        release_faceU
+//        release_MS_ST_SUPER
+//        debug_faceU
+//        debug_MS_ST_106
+//        release_MS_ST_106
+        print("=== " + variant.buildType.name + " === ")
+        if (variant.buildType.name.contains("MS_ST_240")) {
+            variant.mergeAssets.doLast {
+                delete fileTree(variant.mergeAssets.outputDir).matching {
+                    include "beauty/makeup/compose/**", "beauty/makeup/custom/**",
+                            "facemode/ms/**", "facemode/st/advance/**", "facemode/fu/**"
+                }
+            }
+        } else if (variant.buildType.name.contains("MS_ST_106")) {
+            variant.mergeAssets.doLast {
+                delete fileTree(variant.mergeAssets.outputDir).matching {
+                    include "beauty/makeup/compose240/**", "beauty/makeup/custom240/**",
+                            "facemode/ms/**", "facemode/st/advance/**", "facemode/st/240/**", "facemode/fu/**"
+                }
+            }
+        } else if (variant.buildType.name.contains("faceU")) {
+            variant.mergeAssets.doLast {
+                delete fileTree(variant.mergeAssets.outputDir).matching {
+                    include "beauty/makeup/compose240/**", "beauty/makeup/custom240/**",
+                            "facemode/ms/**", "facemode/st/**"
+                }
+            }
+        } else if (variant.buildType.name.contains("MS_ST_SUPER")) {
+            variant.mergeAssets.doLast {
+                delete fileTree(variant.mergeAssets.outputDir).matching {
+                    include "beauty/makeup/compose240/**", "beauty/makeup/custom240/**",
+                            "facemode/ms/**", "facemode/st/240/**", "facemode/st/106/**", "facemode/fu/**"
+                }
+            }
+        } else if (variant.buildType.name == ("\"debug\"") || variant.buildType.name == ("\"release\"")) {
+            variant.mergeAssets.doLast {
+                delete fileTree(variant.mergeAssets.outputDir).matching {
+                    include "beauty/makeup/compose240/**", "beauty/makeup/custom240/**",
+                            "facemode/ms_st_super/**", "facemode/st/**", "facemode/fu/**"
+                }
+            }
+        }
+        variant.outputs.all { output ->
+            def buildName = "com.meishe"
+            def type = variant.buildType.name
+            if (type == "debug" || type == "debug_faceU") {
+                def releaseApkName = 'app-debug'
+                outputFileName = new File("../.././../../../build/outputs/apk/debug", releaseApkName + '_' + type + '.apk')
+            } else {
+                def releaseApkName = buildName + '_' + variant.productFlavors.get(0).name + '_' + type + "_" + versionName + '_' + releaseTime() + '.apk'
+                outputFileName = releaseApkName
+            }
+        }
+    }
+}
+
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd--HH-mm-ss", TimeZone.getTimeZone("GMT+8"))
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar'], dir: extraLibPath + 'lib/android_jar')
+    implementation fileTree(include: ['*.jar'], dir: extraLibPath + 'extrasdk/sdk/android')
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation(name: 'library-ui-release', ext: 'aar')
+    implementation(name: 'library-core-release', ext: 'aar')
+    implementation(name: 'extension-flac-release', ext: 'aar')
+    implementation(name: 'STMobileJNI', ext: 'aar')
+    implementation(name: 'cafconvertor', ext: 'aar')
+
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    implementation 'com.facebook.fresco:fresco:1.12.0'
+    // 支持 GIF 动图，需要添加
+    implementation 'com.facebook.fresco:animated-gif:1.12.0'
+    // 支持 WebP （静态图+动图），需要添加
+    implementation 'com.facebook.fresco:animated-webp:1.12.0'
+    implementation 'com.facebook.fresco:webpsupport:1.12.0'
+    // 仅支持 WebP 静态图，需要添加
+    implementation 'com.facebook.fresco:webpsupport:1.12.0'
+    testImplementation 'junit:junit:4.13.1'
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+
+    //seekbar
+    implementation 'com.zhouyou:signseekbar:1.0.6'
+
+    // cardview
+    implementation "androidx.cardview:cardview:1.0.0"
+}
+
+def meisheSdkExtraPath(File rootDir) {
+    String defaultPath = "../../../../"
+    try {
+        File confFile = new File(rootDir.getAbsolutePath() + "/../../../meishesdk_libpath.conf")
+        if (!confFile.exists()) {
+            if (confFile.createNewFile()) {
+                FileOutputStream outputStream = new FileOutputStream(confFile)
+                outputStream.write(defaultPath.getBytes())
+                outputStream.close()
+                return defaultPath
+            }
+        }
+        BufferedReader br = new BufferedReader(new FileReader(confFile))
+        String readline = ""
+        StringBuffer sb = new StringBuffer()
+        while ((readline = br.readLine()) != null) {
+            sb.append(readline)
+        }
+        br.close()
+        String pathTmp = sb.toString()
+        pathTmp = pathTmp.replace("\\", "/")
+        if (!pathTmp.endsWith("/")) {
+            pathTmp += "/"
+        }
+        if (pathTmp == null || pathTmp.isEmpty()) {
+            pathTmp = defaultPath
+        }
+        print("sdk path:" + pathTmp)
+        return pathTmp
+    } catch (Exception e) {
+        e.printStackTrace()
+    }
+    return defaultPath
+}

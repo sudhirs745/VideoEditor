@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:ignore="RtlCompat">
+
+    <RelativeLayout
+        android:id="@+id/real_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp12"
+        android:paddingLeft="@dimen/dp20"
+        android:paddingRight="@dimen/dp20">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp25"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <LinearLayout
+                android:id="@+id/linear_point"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_confirm"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image_point"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@mipmap/icon_add_point" />
+
+                <TextView
+                    android:id="@+id/tv_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="9dp"
+                    android:text="@string/tv_point_add"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp9" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_point_cover"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignStart="@+id/linear_point"
+                android:layout_alignEnd="@+id/linear_point"
+                android:background="@color/black_alfph" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.glitchcam.vepromei.edit.view.NvBezierSpeedView
+        android:id="@+id/bizer_view"
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:layout_below="@+id/real_top"
+        android:layout_marginLeft="@dimen/dp12"
+        android:layout_marginRight="@dimen/dp12"
+        android:layout_marginTop="@dimen/dp12"
+        />
+
+
+</LinearLayout>

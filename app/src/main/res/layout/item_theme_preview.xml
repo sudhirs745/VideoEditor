@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_theme_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_iv_bg"
+        android:layout_width="@dimen/dp66"
+        android:layout_height="@dimen/dp66"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_iv_bg_checked"
+        android:layout_width="@dimen/dp66"
+        android:layout_height="@dimen/dp66"
+        android:visibility="invisible"
+        android:background="#CC4A90E2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_iv_edit"
+        android:layout_width="@dimen/dp18"
+        android:layout_height="@dimen/dp18"
+        android:src="@mipmap/ic_theme_preview_edit"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/item_tv_edit"
+        app:layout_constraintEnd_toEndOf="@+id/item_iv_bg"
+        app:layout_constraintStart_toStartOf="@+id/item_iv_bg"
+        app:layout_constraintTop_toTopOf="@+id/item_iv_bg" />
+
+    <TextView
+        android:id="@+id/item_tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击编辑"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp10"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/item_iv_bg"
+        app:layout_constraintEnd_toEndOf="@+id/item_iv_bg"
+        app:layout_constraintStart_toStartOf="@+id/item_iv_bg"
+        app:layout_constraintTop_toBottomOf="@+id/item_iv_edit" />
+
+    <TextView
+        android:id="@+id/item_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_iv_bg" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6dp"
+    android:layout_marginBottom="8dp">
+
+    <ImageView
+        android:id="@+id/iv_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_marginBottom="36dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bank_thumbnail_local" />
+
+    <ImageView
+        android:id="@+id/iv_item_cover"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_marginBottom="36dp"
+        android:scaleType="centerCrop"
+        android:background="@color/colorTrans_cover"/>
+
+    <TextView
+        android:id="@+id/tv_media_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="42dp"
+        android:layout_marginStart="6dp"
+        android:gravity="center_vertical"
+        android:shadowColor="@color/ff000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:drawablePadding="3dp"
+        app:drawableLeftCompat="@mipmap/videocam_material"
+        tools:ignore="RtlHardcoded,SmallSp"
+        app:drawableStartCompat="@mipmap/videocam_material" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_blank_circle"/>
+
+    <ImageView
+        android:id="@+id/iv_check_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_white_circle"/>
+
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_checked"/>
+
+    <TextView
+        android:id="@+id/tv_media_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom|start"/>
+
+</FrameLayout>

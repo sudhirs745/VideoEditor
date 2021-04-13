@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_theme_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_caption_iv_edit"
+        android:layout_width="@dimen/dp23p5"
+        android:layout_height="@dimen/dp17p5"
+        android:layout_marginStart="@dimen/dp30"
+        android:layout_marginLeft="@dimen/dp30"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_theme_t"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/item_caption_bt_edit"
+        android:layout_width="@dimen/dp66"
+        android:layout_height="@dimen/dp22"
+        android:background="@drawable/item_caption_bg"
+        android:gravity="center"
+        android:text="@string/theme_edit_tv_name"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_caption_tv_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8.5dp"
+        android:layout_marginRight="6dp"
+        android:background="#FF1A1A1A"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:minHeight="@dimen/dp30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/item_caption_bt_edit"
+        app:layout_constraintStart_toEndOf="@id/item_caption_iv_edit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

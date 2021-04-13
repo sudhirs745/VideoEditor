@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_speed_container"
+    android:layout_width="match_parent"
+    android:layout_height="213dp"
+    android:background="#242728"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:ignore="RtlCompat">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white_f8"
+        android:textSize="@dimen/sp10"
+        android:text="@string/change_speed"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp10"
+
+        >
+        <com.glitchcam.vepromei.edit.view.EditChangeSpeedScrollView
+            android:id="@+id/speed_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/ll_confirm"
+        android:background="#1AFFFFFF" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp">
+
+        <CheckBox
+            android:id="@+id/ck_change_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/sp12"
+            android:layout_marginLeft="@dimen/dp10"
+            android:button="@drawable/bg_checkbox"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp10"
+            android:text="@string/video_change_voice"
+            android:textColor="@color/white"
+            android:checked="false"
+            />
+        <ImageView
+            android:id="@+id/speedFinish"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/finish"
+            android:layout_margin="@dimen/dp15"
+            android:layout_centerInParent="true"
+
+            />
+    </RelativeLayout>
+</LinearLayout>

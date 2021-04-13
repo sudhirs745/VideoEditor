@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_seek_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/linear_blur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="invisible"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp15"
+                android:text="@string/tv_seekbar_level"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp10" />
+
+            <SeekBar
+                android:id="@+id/view_seek_bar_level_blur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:maxHeight="@dimen/dp3"
+                android:progressDrawable="@drawable/seekbar_red_gray"
+                android:thumb="@mipmap/icon_seek_bar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_mosic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:text="@string/tv_seekbar_level"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp10" />
+
+                <SeekBar
+                    android:id="@+id/view_seek_bar_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:maxHeight="@dimen/dp2"
+                    android:progressDrawable="@drawable/seekbar_red_gray"
+                    android:thumb="@mipmap/icon_seek_bar" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_seekbar_num"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp10" />
+
+                <SeekBar
+                    android:id="@+id/view_seek_bar_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:maxHeight="@dimen/dp2"
+                    android:progressDrawable="@drawable/seekbar_red_gray"
+                    android:thumb="@mipmap/icon_seek_bar" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_watermark"
+        android:layout_below="@+id/rl_seek_root"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

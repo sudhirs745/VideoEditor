@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/tv_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/ccffffff"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="15dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/view_background"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerVertical="true"
+            android:background="#363636"
+            android:layout_marginRight="15dp"
+            />
+        <LinearLayout
+            android:id="@+id/view_mask"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            >
+
+        </LinearLayout>
+        <View
+            android:id="@+id/view_shadow"
+            android:layout_height="15dp"
+            android:layout_width="15dp"
+            android:background="@mipmap/change_speed_drag_icon"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+    </LinearLayout>
+
+</LinearLayout>

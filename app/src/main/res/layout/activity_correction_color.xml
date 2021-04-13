@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.glitchcam.vepromei.edit.clipEdit.correctionColor.CorrectionColorActivity">
+
+    <com.glitchcam.vepromei.edit.view.CustomTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/spaceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#ff242728">
+
+        <!--其他调节-->
+        <LinearLayout
+            android:id="@+id/ll_seek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp25"
+            android:paddingRight="@dimen/dp75"
+            android:layout_above="@id/colorTypeRv"
+            android:layout_marginBottom="@dimen/dp30"
+            >
+            <TextView
+                android:id="@+id/colorResetImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reset"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:gravity="center"
+                />
+            <SeekBar
+                android:id="@+id/colorSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp30"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:progressDrawable="@drawable/caption_size_seekbar"
+                android:thumb="@drawable/custom_voice_seekbar_ball" />
+
+        </LinearLayout>
+        <com.glitchcam.vepromei.edit.view.DenoiseAdjustView
+            android:id="@+id/denoise_adjust"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_above="@id/colorTypeRv"
+            android:visibility="gone"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/colorTypeRv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/view_divide"
+            android:layout_marginBottom="@dimen/dp20"
+            />
+
+        <View
+            android:id="@+id/view_divide"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/correctionColorFinish"
+            android:background="#1AFFFFFF" />
+
+        <ImageView
+            android:id="@+id/correctionColorFinish"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dp15"
+            android:background="@mipmap/finish" />
+    </RelativeLayout>
+</LinearLayout>

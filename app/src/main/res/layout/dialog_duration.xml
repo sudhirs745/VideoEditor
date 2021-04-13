@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/privacy_statement_dailog_style">
+
+        <TextView
+            android:id="@+id/tv_itle"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginStart="24dp"
+            android:textColor="#ff333333"
+            android:textSize="18sp"
+            android:text="@string/photo_duration"
+            android:textStyle="bold"
+            android:gravity="start|center_vertical"/>
+
+        <LinearLayout
+            android:id="@+id/ll_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/tv_itle"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <com.zhouyou.view.seekbar.SignSeekBar
+                android:id="@+id/sv_time_duration"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                app:ssb_progress="3"
+                app:ssb_max="10"
+                app:ssb_min="0"
+                app:ssb_section_text_position="bottom_sides"
+                app:ssb_show_progress_in_float="true"
+                app:ssb_show_section_mark="false"
+                app:ssb_show_section_text="true"
+                app:ssb_show_sign="true"
+                app:ssb_sign_width="34dp"
+                app:ssb_show_thumb_text="false"
+                app:ssb_sign_arrow_height="5dp"
+                app:ssb_sign_arrow_width="10dp"
+                app:ssb_sign_border_color="@color/green_afd"
+                app:ssb_sign_color="@color/green_afd"
+                app:ssb_sign_border_size="1dp"
+                app:ssb_sign_show_border="true"
+                app:ssb_second_track_color="@color/green_afd"
+                app:ssb_track_color="@color/grey850"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/ll_middle"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp2"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_dur_dlg_cancel"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:textColor="#ff333333"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold"
+                android:text="@string/cancel"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/tv_dur_dlg_ok"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:textColor="#ff333333"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold"
+                android:text="@string/dlg_ok"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

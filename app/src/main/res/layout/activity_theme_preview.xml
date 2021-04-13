@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".themeshoot.ThemeSelectActivity"
+    android:background="@color/ff1a1d24">
+    <com.glitchcam.vepromei.edit.view.CustomTitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_titleBar_height">
+    </com.glitchcam.vepromei.edit.view.CustomTitleBar>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/title"
+        android:id="@+id/theme_template_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>

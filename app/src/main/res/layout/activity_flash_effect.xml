@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.glitchcam.vepromei.glitter.GlitterEffectActivity">
+
+    <RelativeLayout
+        android:id="@+id/glitter_effect_rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/glitter_effect_close"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@null"
+        android:src="@drawable/flash_effect_back_icon" />
+
+    <ImageView
+        android:id="@+id/glitter_effect_expose"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@null"
+        android:src="@drawable/flash_effect_flash_icon" />
+
+    <TextView
+        android:id="@+id/record_time_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:text="@string/zeroZZZ"
+        android:textColor="#FC3E3E"
+        android:textSize="15sp"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/glitter_effect_switch"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="9dp"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:src="@drawable/switch_cs" />
+
+    <com.glitchcam.vepromei.glitter.NvRecordButton
+        android:id="@+id/startRecording_button"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:clickable="true" />
+
+    <TextView
+        android:id="@+id/glitter_effect_style_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="83dp"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:drawableTop="@drawable/flash_effect_style_icon"
+        android:text="@string/style"
+        android:textColor="#FEFEFE"
+        android:textSize="@dimen/sp12" />
+
+    <TextView
+        android:id="@+id/glitter_effect_strength_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="83dp"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:drawableTop="@drawable/flash_effect_strength_icon"
+        android:text="@string/intensity"
+        android:textColor="#FEFEFE"
+        android:textSize="@dimen/sp12" />
+
+</RelativeLayout>

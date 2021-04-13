@@ -1,0 +1,754 @@
+<resources>
+
+    <string name="app_name">Glitch Cam Video Editor</string>
+
+    <array name="select_video_tips">
+        <item>@string/prompt</item>
+        <item>Please choose 2 materials</item>
+    </array>
+    <array name="video_delete_tips">
+        <item>@string/prompt</item>
+        <item>Keep at least one material.</item>
+    </array>
+    <array name="spilt_video_tips">
+        <item>@string/prompt</item>
+        <item>Can\'t split video less than 1 second</item>
+    </array>
+
+    //////////////////////MainPage///////////////////////////////////
+    <array name="music_fragment_title">
+        <item>@string/localMusic</item>
+        <item>@string/myMusic</item>
+    </array>
+
+    <string name="app_name_super">MeiCam(Super)</string>
+    <string name="app_name_ms">MeiCamArScene</string>
+    <string name="privacy_statement">Agreement and policy</string>
+    <string name="statement_content">Please carefully read and fully understand the terms and conditions of service agreement and privacy policy. Meitu only provides video editing and shooting services, and will not collect your personal information. You can read the \"Service Agreement\" and \"Privacy Policy\" for details. If you agree, please click agree to accept our service.</string>
+    <string name="service_agreement">Service Agreement</string>
+
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="not_used">Not used</string>
+    <string name="agree">Agree</string>
+    <string name="ssl_error_prompt">The SSL certificate failed, whether to continue to visit?</string>
+    <string name="douYinEffects">DouVideo</string>
+    <string name="particleEffects">Particle</string>
+    <string name="captureScene">VirtualKeyer</string>
+    <string name="picInPic">PIP</string>
+    <string name="flipSubtitles">FlipCaption</string>
+    <string name="musicLyrics">MusicLyrics</string>
+    <string name="pushMirrorFilm">SuperZoom</string>
+    <string name="boomRang">Boomerang</string>
+    <string name="makingCover">MakeCover</string>
+    <string name="photosAlbum">PhotoAlbum</string>
+    <string name="flashEffect">FlashEffect</string>
+    <string name="mimo">Mimo</string>
+    <string name="theme_shoot">ThemeShoot</string>
+    <string name="initArsence">Arscene module is initializing, please later</string>
+    <string name="no_back_activity_cancel">Cancel</string>
+
+    <string name="no_back_activity_setting">Setting</string>
+
+    <string name="transition_time">Transition time 0.3s</string>
+
+    <string name="no_back_activity_message">\"Don\'t keep activities\" option has open which cause the normal function can\'t use. Please click on the \"SETTING\",and shut down \"Don\'t keep activities\" in the \"developer options\".</string>
+    <string name="versionNumber">V %1$s</string>
+    <string name="videoCapture">Video Shoot</string>
+
+    //////////////////////Setting//////////////////////////////////
+    <string name="videoEditName">Video Edit</string>
+    <string name="setting">Setting</string>
+    <string name="captureSetting">Capture Setting</string>
+    <string name="captureResolution">Resolution</string>
+    <string name="int1080">1080</string>
+    <string name="int720">720</string>
+    <string name="int540">540</string>
+    <string name="outputSetting">Output Setting</string>
+    <string name="outputResolution">Resolution</string>
+    <string name="k4k">4K</string>
+    <string name="bitrate">Bitrate</string>
+    <string name="mbps">Mbps</string>
+    <string name="disable_hardware_encoder">Hardware Encoder</string>
+    <string name="others">Others</string>
+    <string name="background_blur_fill">Background Blur</string>
+    <string name="input_error">Data error，input again</string>
+
+    //////////////////////FeedBack////////////////////////////////
+    <string name="feedback">Feedback</string>
+    <string name="feedback_hint_text">Please enter</string>
+    <string name="feedback_hint_number">Keeping the contact can solve problems better~</string>
+    <string name="feedback_tip1">Content cannot be empty</string>
+    <string name="feedback_tip2">Contact information cannot be empty</string>
+    <string name="feedback_tip3">Submit Successfully</string>
+    <string name="feedback_tip4">Submit failed</string>
+    <string name="feedbackContent">Details</string>
+    <string name="zero_over_oneThousand">0/1000</string>
+    <string name="contactWay">Contact Information</string>
+    <string name="submitFeedback">Submit</string>
+    <string name="businessCooperation">Business \nTel:010-82851890 \nMail:meishe_sdk@cdv.com</string>
+
+    //////////////////////VideoCapture//////////////////////////////////
+    <string name="photo">Photo</string>
+    <string name="video">Video</string>
+    <string name="zoom">Zoom</string>
+    <string name="switch_camera">Flip</string>
+    <string name="picture_zoom">Zoom</string>
+    <string name="exposure_compensation">Exposure</string>
+    <string name="exposure">Exposure</string>
+    <string name="sharpen_open">Open Sharpness</string>
+    <string name="sharpen_close">Close Sharpness</string>
+    <string name="default_beauty_close">Close Beauty filter</string>
+    <string name="default_beauty_open">Open Beauty filter</string>
+    <string name="beauty_close">Close</string>
+    <string name="beauty_open">Open</string>
+    <string name="beauty_shape_close">Close</string>
+    <string name="beauty_shape_open">Open</string>
+    <string name="beauty">Beauty</string>
+    <string name="skin_beauty">Skin</string>
+    <string name="facetype">Facetype</string>
+    <string name="makeup">Makeup</string>
+    <string name="strength">Strength</string>
+    <string name="whitening">White</string>
+    <string name="ruddy">Rosy</string>
+    <string name="zeroZZZ">00:00</string>
+    <string name="more">More</string>
+    <string name="cartoon_filter">Cartoon Filter</string>
+    <string name="whitening_A">White A</string>
+    <string name="whitening_B">White B</string>
+    <string name="whiteningA">· White A</string>
+    <string name="whiteningB">· White B</string>
+    <string name="beauty_whitening_mode">whitening mode</string>
+    <string name="beauty_a">A</string>
+    <string name="beauty_b">B</string>
+
+    <string name="cheek_thinning">Face</string>
+    <string name="eye_enlarging">Eyes</string>
+    <string name="intensity_forehead">Forhead</string>
+    <string name="intensity_chin">Chin</string>
+    <string name="intensity_nose">Nose</string>
+    <string name="intensity_mouth">Mouth</string>
+    <string name="face_small">FacLen</string>
+    <string name="face_thin">FacWid</string>
+    <string name="nose_long">LonNor</string>
+    <string name="eye_corner">EyeCor</string>
+    <string name="mouse_corner">MouCor</string>
+
+    <string name="beauty_facetype_first">Type1</string>
+    <string name="beauty_facetype_second">Type2</string>
+    <string name="makeup_null">none</string>
+    <string name="makeup_exist_main_menu_1">晒伤妆</string>
+    <string name="makeup_exist_main_menu_2">烟熏妆</string>
+    <string name="makeup_exist_main_menu_3">古风妆</string>
+
+    <string name="makeup_custom_main_menu_libstick">口红</string>
+    <string name="makeup_custom_main_menu_eyebrow">眉毛</string>
+    <string name="makeup_custom_main_menu_eye_shadow">眼影</string>
+    <string name="makeup_custom_main_menu_eyelash">睫毛</string>
+    <string name="makeup_custom_main_menu_blush">腮红</string>
+    <string name="makeup_custom_main_menu_shadow">阴影</string>
+
+    <string name="makeup_custom_sub_menu_libstick_1">雾面哑光</string>
+    <string name="makeup_custom_sub_menu_libstick_2">水彩纯釉</string>
+    <string name="makeup_custom_sub_menu_libstick_3">质感缎面</string>
+
+
+    <string name="makeup_custom_sub_menu_eyebrow_1">一字眉</string>
+    <string name="makeup_custom_sub_menu_eyebrow_2">欧美眉</string>
+    <string name="makeup_custom_sub_menu_eyebrow_3">柳叶眉</string>
+
+
+    <string name="makeup_custom_sub_menu_eye_shadow_1">日常</string>
+    <string name="makeup_custom_sub_menu_eye_shadow_2">华丽</string>
+    <string name="makeup_custom_sub_menu_eye_shadow_3">大烟熏</string>
+
+    <string name="makeup_custom_sub_menu_eyelash_1">自然</string>
+    <string name="makeup_custom_sub_menu_eyelash_2">浓密</string>
+    <string name="makeup_custom_sub_menu_eyelash_3">芭比</string>
+
+
+    <string name="makeup_custom_sub_menu_blush_1">办公室</string>
+    <string name="makeup_custom_sub_menu_blush_2">约会</string>
+    <string name="makeup_custom_sub_menu_blush_3">聚会</string>
+
+    <string name="makeup_custom_sub_menu_shadow_1">深邃</string>
+    <string name="makeup_custom_sub_menu_shadow_2">可爱</string>
+    <string name="makeup_custom_sub_menu_shadow_3">饱满</string>
+
+    //////////////////////Selectvideo//////////////////////////////////
+    <string name="selectMedia">Select Asset</string>
+    <string name="setSelectMedia">%1$d Assets</string>
+
+    <string name="select_two_video">Choose 2 materials to make</string>
+    <string name="select_the_second_video">Select the 2nd material</string>
+    <string name="prompt">Tips</string>
+    <string name="startMaking">Next</string>
+    <string name="checkAll">Select</string>
+    <string name="cancelCheckAll">Deselect</string>
+    <string name="date">Date</string>
+    <string name="yearMonthDate">yyyy-MM-dd</string>
+    <string name="today">Today</string>
+    <string name="single_select_picture">Select Image</string>
+    <string name="select_video">Select Video</string>
+    <string name="select_assets">Select Assets</string>
+    <string name="select_production_proportion">Choose making ratio</string>
+    <string name="twentyOneTNine">21:9</string>
+    <string name="nineTTwentyOne">9:21</string>
+
+    <string name="sixteenTNine">16:9</string>
+    <string name="eighteenTNine">18:9</string>
+    <string name="nineTEighteen">9:18</string>
+    <string name="nineTSixteen">9:16</string>
+    <string name="fourTThree">4:3</string>
+    <string name="threeTFour">3:4</string>
+    <string name="oneTone">1:1</string>
+    <string name="videoEdit">Video Edit</string>
+    <string name="compile">Compile</string>
+    <string name="theme">Theme</string>
+
+    //////////////////////VideoEdit//////////////////////////////////
+    <string name="edit">Edit</string>
+    <string name="glitch">Glitch</string>
+    <string name="filter">Filter</string>
+    <string name="animatedSticker">Sticker</string>
+    <string name="animation">Animation</string>
+    <string name="caption">Caption</string>
+    <string name="comcaption">Comcaption</string>
+    <string name="background">BACKGROUND</string>
+    <string name="watermark">Watermark</string>
+    <string name="transition">Transition</string>
+    <string name="music">Music</string>
+    <string name="dub">Dub</string>
+    <string name="stayTuned">Stay tuned!</string>
+    <string name="contactBusiness">Move to the official website to contact business people</string>
+    <string name="originalSound">Origin</string>
+    <string name="int50">50</string>
+    <string name="int0">0</string>
+    <string name="traditional_caption">Traditional caption</string>
+    <string name="pieced_together_caption">Pieced together caption</string>
+
+    <string name="march_out_animation">March out animation</string>
+    <string name="march_in_animation">March in animation</string>
+    <string name="combination_animation">Combination animation</string>
+    <string name="theme_tip">Pause and edit the title text</string>
+    <string name="theme_title">Record a Good Life</string>
+    <string name="trim">TRIM</string>
+    <string name="split">SPLIT</string>
+    <string name="correctionColor">BRIGHTNESS</string>
+    <string name="adjust">RATIO</string>
+    <string name="speed">SPEED</string>
+    <string name="volume">VOLUME</string>
+    //////////////////////Theme//////////////////////////////////
+    <string name="copy">COPY</string>
+    <string name="delete">DELETE</string>
+
+    //////////////////////videoClipEdit////////////////////////////////
+    <string name="clip_add_key_frame_text">Add KeyFrame</string>
+    <string name="clip_edit_key_frame_text">Edit KeyFrame</string>
+    <string name="duration">Duration</string>
+    <string name="movement">Motion</string>
+    <string name="trim_duration">The total duration after triming is</string>
+    <string name="brightness">Brightness</string>
+    <string name="contrast">Contrast</string>
+    <string name="saturation">Saturation</string>
+    <string name="degree">Degree</string>
+
+    <string name="highlights">Highlights</string>
+    <string name="color_shadow">Shadow</string>
+    <string name="color_temperature">color temperature</string>
+    <string name="tone">tone</string>
+    <string name="color_fade">Color fade</string>
+    <string name="hot_pixel">Hot Pixel</string>
+    <string name="sharpness">Sharpness</string>
+
+    <string name="horizontal">Horizontal</string>
+    <string name="vertical">Vertical</string>
+    <string name="rotate">Rotate</string>
+    <string name="clip_reset">Reset</string>
+    <string name="angle">Angle</string>
+    <string name="string_format_one_point">"%.1f"</string>
+    <string name="change_speed">Hold down the slider and adjust speed</string>
+
+    <string name="change_duration">Drag the slider to adjust duration</string>
+    <string name="picture_move">Picture Movement</string>
+
+    <string name="area_display">Region</string>
+    <string name="total_display">Full</string>
+    <string name="start_rect">Start Screen</string>
+    <string name="end_rect">End Screen</string>
+    <string name="play_end">End</string>
+
+    <string name="one_eighthX">1/8x</string>
+    <string name="quarterX">1/4x</string>
+    <string name="halfX">1/2x</string>
+    <string name="oneX">1x</string>
+    <string name="twoX">2x</string>
+    <string name="fourX">4x</string>
+    <string name="tenS">10s</string>
+    <string name="intensity">Intensity</string>
+    <string name="add">Add</string>
+    <string name="free">Free</string>
+    <string name="circle">Circle</string>
+    <string name="square">Square</string>
+
+    <string name="select_content">Select Content</string>
+    <string name="customStickerselecteffect">Select actions</string>
+    <string name="style">Style</string>
+    <string name="outline_width">Width</string>
+    <string name="size">0</string>
+    <string name="opacity">Opacity</string>
+    <string name="corner">Corner</string>
+
+    //////////////////////Filter////////////////////////////////
+    <string name="bold">Bold</string>
+
+    //////////////////////AnimatedSticker/////////////////////////
+    <string name="italic">Italic</string>
+    <string name="shadow">Shadow</string>
+    <string name="underscore">Underscore</string>
+    <string name="line_spacing">Line_Space</string>
+    <string name="letter_spacing">Letter_Space</string>
+    <string name="small">Small</string>
+    <string name="standard">Standard</string>
+    <string name="more_large">More</string>
+
+    //////////////////////Caption//////////////////////////////////
+    <string name="large">Large</string>
+    <string name="apply_to_all">Apply all</string>
+    <string name="inputSubtitle">Please enter caption text:</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm2">Confirm</string>
+    <string name="check_network">Please check whether the network connection</string>
+    <string name="download_failed">Download failed</string>
+    <string name="giveupfx">Give up the effects ?</string>
+    <string name="modify">Modify</string>
+    <string name="compoundcaption">CompoundCaption</string>
+    <string name="select_music">Pick a Sound</string>
+    <string name="singlePieceMusic">Single</string>
+    <string name="morePieceMusic">Multi</string>
+    <string name="noneMusic">No music</string>
+    <string name="localMusic">Local music</string>
+    <string name="myMusic">My music</string>
+    <string name="use">use</string>
+    <string name="music_default_size">00:00/00:10</string>
+    <string name="fadeIn_fadeOut">Fade</string>
+    <string name="play_error">Play error</string>
+    <string name="soundEffect">effect</string>
+    <string name="moreTheme">More Themes</string>
+    <string name="moreAnimation">More Animations</string>
+
+    //////////////////////CompoundCaption/////////////////////////////
+    <string name="moreFilter">More Filters</string>
+    <string name="moreAnimatedSticker">More Stickers</string>
+
+    //////////////////////WaterMark//////////////////////////////////
+    <string name="moreCaptionStyle">More Caption Styles</string>
+
+    //////////////////////Music////////////////////////////////
+    <string name="more_caption_bubble">>More Caption Bubble</string>
+    <string name="moreTransition">More Transitions</string>
+    <string name="moreFaceU">More Props</string>
+    <string name="moreCustomStickerEffect">More Custom Effects</string>
+    <string name="moreCompoundCaptionStyle">More CompoundCaption Styles</string>
+    <string name="props_all">ALl</string>
+    <string name="props_2d">2D</string>
+    <string name="props_3d">3D</string>
+    <string name="props_forword">Foreground</string>
+    <string name="props_back">Background</string>
+    <string name="props_eye">Eye</string>
+
+    ////////////////////////Dub///////////////////////////////////
+    <string name="props_mouth">Mouth</string>
+    <string name="props_head">Head</string>
+    <string name="props_fake_face">Fake face</string>
+    <string name="props_animoji">animoji</string>
+    //////////////////////Download////////////////////////////////
+    <string name="props_hand">Hand</string>
+    <string name="down_load_size">Size：%1$s</string>
+    <string name="down_load_use">Employ</string>
+    <string name="down_load_incompatibility">Incompatibility</string>
+    <string name="down_load_effects">Effects</string>
+    <string name="asset_loading">Loading…</string>
+    <string name="asset_loadfailed">Failed to load!</string>
+    <string name="retry">Retry</string>
+    <string name="asset_ratio">General</string>
+    <string name="asset_mismatch">Mismatch</string>
+    <string name="asset_download">Download</string>
+    <string name="asset_downloading">Downloading</string>
+    <string name="asset_updating">Updating</string>
+    <string name="asset_downloadfinished">Finished</string>
+    <string name="asset_update">Update</string>
+    <string name="loading">Loading...</string>
+    <string name="network_strayed_try">The network is running out, please try again</string>
+    <string name="beautify">Beauty</string>
+    <string name="timer">Timer</string>
+    <string name="faceU">Props</string>
+    <string name="speed_super_slow">Epic</string>
+    <string name="speed_slow">Slow</string>
+    <string name="speed_standard">Normal</string>
+
+    <string name="speed_fast">Fast</string>
+    <string name="speed_super_fast">Lapse</string>
+    <string name="photoalbum">Album</string>
+    <string name="zeroS">0s</string>
+    <string name="fifteenS">15s</string>
+    <string name="drag_select_pause_position">Mark the stop point</string>
+    <string name="start_countdown_shooting">Start Countdown</string>
+    <string name="douyin_recorder_maxduration_tips">Already finished, you can delete a paragraph to continue</string>
+    <string name="timeline_fx">Timeline Fx</string>
+    <string name="filter_fx">Filter Fx</string>
+    <string name="filter_fx_tip">Long press to use the effect</string>
+    <string name="timeline_fx_tip">Select a time effect</string>
+
+    //////////////////////DouYin////////////////////////////////
+    <string name="timeline_fx_none">None</string>
+    <string name="timeline_fx_repeat">Repeat</string>
+    <string name="timeline_fx_slow_motion">SLO-MO</string>
+    <string name="timeline_fx_reverse">Reverse</string>
+    <string name="picInPicEdit">PIP Edit</string>
+    <string name="template">Template</string>
+    <string name="preview">Preview</string>
+    <string name="particle">Particle</string>
+    <string name="graffiti">Graffiti</string>
+    <string name="capture_face">Face</string>
+    <string name="capture_hand">Gesture</string>
+    <string name="particle_num">Num</string>
+    <string name="particle_size">Size</string>
+    <string name="tipsHand">Make a "1" gesture,please</string>
+    <string name="tipsEye">Blink your eyes,please</string>
+    <string name="tipsMouth">Open your mouth,please</string>
+    <string name="selectingPosition_paintPicture">Select the location and paint on the screen</string>
+    <string name="unselect_video">No video selected</string>
+    <string name="particle_stmobile_init_fail_tip">Failed to initiate the face and gestures</string>
+    <string name="flash_cs">Flash</string>
+
+    <string name="background_cs">Background</string>
+    <string name="tips_cs">Click on the color of the screen to be removed, then select a scene.</string>
+    <string name="single_color_recommended">Suggest,shooting background is a single color</string>
+    <string name="noRemind">Don\'t remind</string>
+    <string name="reset">Reset</string>
+
+    <string name="flipCaption">Flip Caption</string>
+    <string name="color">Color</string>
+    <string name="font">Font</string>
+    <string name="caption_edit">Caption Edit</string>
+
+    //////////////////////PicInPic////////////////////////////////
+    <string name="musicCaption">LyricsCaption</string>
+    <string name="i_know">Got it</string>
+    <string name="generating">Creating...</string>
+
+    //////////////////////Particle////////////////////////////////
+    <string name="completedTips">Finished\nPlease check the album</string>
+    <string name="compiling">Video is Creating</string>
+    <string name="downloading">The template is downloading</string>
+    <string name="versionBelowTip">This module is viewed above Android 4.3</string>
+    <string name="super_zoom_cartoon">cartoon</string>
+    <string name="super_zoom_daily">daily</string>
+    <string name="super_zoom_Dogpacks">Dog packs</string>
+    <string name="super_zoom_dramatization">dramatization</string>
+    <string name="super_zoom_fire">fire</string>
+
+    <string name="super_zoom_horror">horror</string>
+    <string name="super_zoom_love">love</string>
+
+    <string name="super_zoom_no">no</string>
+
+    //////////////////////CaptureScene////////////////////////////////
+    <string name="super_zoom_rhythm">rhythm</string>
+    <string name="super_zoom_rotate">rotate</string>
+    <string name="super_zoom_shake">shake</string>
+    <string name="super_zoom_spring">spring</string>
+    <string name="super_zoom_tragedy">tragedy</string>
+    <string name="super_zoom_TV">TV</string>
+
+    //////////////////////FlipCaption//////////////////////////////////
+    <string name="super_zoom_wasted">wasted</string>
+    <string name="trans_fade">Fade</string>
+    <string name="trans_turning">Turning</string>
+    <string name="trans_swap">Swap</string>
+
+    //////////////////////MusicLyrics//////////////////////////////////
+    <string name="trans_stretch_in">Stretch In</string>
+
+    //////////////////////Common Part//////////////////////////////////
+    <string name="trans_page_curl">Page Curl</string>
+    <string name="trans_lens_flare">Lens Flare</string>
+    <string name="trans_star">Star</string>
+    <string name="trans_dip_to_black">Dip To Black</string>
+    <string name="trans_dip_to_white">Dip To White</string>
+
+    //////////////////////SuperZoomActivity////////////////////////////////
+    <string name="trans_push_to_right">Push To Right</string>
+    <string name="trans_push_to_left">Push To Top</string>
+    <string name="trans_upper_left_into">Upper Left Into</string>
+    <string name="text_second">s</string>
+    <string name="transition_interval">Transition Interval</string>
+    <string name="transition_custom">custom</string>
+    <string name="glitter_save_success_tip">Video has been saved to the photo album</string>
+    <string name="hint_open_last_water">Open end watermark</string>
+    <string name="hint_close_last_water">Close end watermark</string>
+    <string name="trim_edit_replace_text">Replace this section</string>
+    <string name="title_text_trim">clip</string>
+    <string name="next_button_text">next</string>
+    <string name="edit_hint">暂停点击虚线框的文字可修改内容</string>
+    <string name="generate">生成</string>
+    <string name="caption_edit_title">组合字幕</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_text_select_media">选择内容</string>
+
+    <!--Cut To -->
+    <string name="key_frame_zoom_in_text">ZoomIn</string>
+    <string name="key_frame_before_frame_text">LastKeyFrame</string>
+    <string name="key_frame_text">Key Frame</string>
+    <string name="key_frame_edit_text">Edit Key Frame</string>
+    <string name="key_frame_add_frame_text">AddKeyFrame</string>
+    <string name="key_frame_delete_frame_text">DeleteKeyFrame</string>
+    <string name="key_frame_next_frame_text">NextKeyFrame</string>
+    <string name="key_frame_zoom_out_text">ZoomOut</string>
+    <string name="replace_keyFrame_ffects">Replace KeyFrame Effects</string>
+    <string name="tips_when_move_animate_sticker">Keyframe editing mode has been exited. If you want to change the position of the sticker, please remove the keyframe first, then drag and move</string>
+    <string name="tips_when_move_caption">Keyframe editing mode has been exited. If you want to change the position of the caption, please remove the keyframe first, then drag and move</string>
+    <string name="tips_when_delete_animate_sticker">Stickers cannot be deleted in key frame mode, please exit the change mode and delete</string>
+    <string name="tips_when_delete_caption">Captions cannot be deleted in key frame mode, please exit the change mode and delete</string>
+    <string name="make_up_custom">Custom</string>
+    <string name="format_1f">%1f</string>
+    <string name="theme_clip_num">Clips: %s</string>
+    <string name="theme_duration">Duration: %s</string>
+    <string name="make_up_transparency">Transparency:%1$d</string>
+    <string name="make_up_tone">Tone:%1$s</string>
+    <string name="theme_edit_tv_name">edit text</string>
+    <string name="complete">complete</string>
+
+    <string name="exit_capture_confirm">confirm exit capture ?</string>
+    <!--    mimo-->
+    <string name="delete_this_video_confirm">delete this video confirm?</string>
+    <string name="effect_name_effect">effect</string>
+    <string name="effect_name_mosaic">mosaic</string>
+    <string name="effect_name_blur">blur</string>
+
+    <!--filter key frame-->
+    <string name="apply_all_clip">apply all clip</string>
+    <string name="background_blur_no">no</string>
+    <string name="tv_seekbar_level">effect level</string>
+    <string name="tv_seekbar_num">effect num</string>
+    <string name="init_arsence_error">init arscene error,please wait</string>
+    <string name="network_not_available">network not available</string>
+    <string name="background_canvas_color">canvas color</string>
+    <string name="background_canvas_style">canvas style</string>
+    <string name="background_canvas_blur">canvas blur</string>
+    <string name="btn_content_start_capture">start capture</string>
+    <string name="zoom_and_adjust_display_range">zoom and adjust display range</string>
+    <string name="content_in_animation">in animation</string>
+    <string name="content_out_animation">out animation</string>
+
+    <string name="composite_animation">composite</string>
+    <string-array name="main_fragment_item">
+        <item>@string/douYinEffects</item>
+        <item>@string/captureScene</item>
+        <item>@string/particleEffects</item>
+        <item>@string/pushMirrorFilm</item>
+        <item>@string/flipSubtitles</item>
+        <item>@string/picInPic</item>
+        <item>@string/musicLyrics</item>
+        <item>@string/boomRang</item>
+        <item>@string/flashEffect</item>
+        <item>@string/photosAlbum</item>
+        <item>@string/makingCover</item>
+        <item>@string/mimo</item>
+        <item>@string/theme_shoot</item>
+    </string-array>
+    <string-array name="main_fragment_background">
+        <item>"main_fragment1_item1_background"</item>
+        <item>"main_fragment1_item2_background"</item>
+        <item>"main_fragment1_item3_background"</item>
+        <item>"main_fragment1_item4_background"</item>
+        <item>"main_fragment2_item1_background"</item>
+        <item>"main_fragment2_item2_background"</item>
+        <item>"main_fragment2_item3_background"</item>
+        <item>"main_fragment2_item4_background"</item>
+        <item>"main_fragment3_item1_background"</item>
+        <item>"main_fragment1_item2_background"</item>
+        <item>"main_fragment3_item1_background"</item>
+        <item>"main_fragment4_item1_background"</item>
+        <item>"main_fragment1_item4_background"</item>
+
+    </string-array>
+    <string-array name="main_fragment_image">
+        <item>"main_fragment1_item1_image"</item>
+        <item>"main_fragment1_item2_image"</item>
+        <item>"main_fragment1_item3_image"</item>
+        <item>"main_fragment1_item4_image"</item>
+        <item>"main_fragment2_item1_image"</item>
+        <item>"main_fragment2_item2_image"</item>
+        <item>"main_fragment2_item3_image"</item>
+        <item>"main_fragment2_item4_image"</item>
+        <item>"main_fragment3_item1_image"</item>
+        <item>"main_fragment3_item2_image"</item>
+        <item>"main_fragment3_item3_image"</item>
+        <item>"main_fragment4_item1_image"</item>
+        <item>"main_fragment4_item2_image"</item>
+    </string-array>
+    <string-array name="settingSuggest">
+        <item>Suggest 45Mbps，Max 200Mbps</item>
+        <item>Suggest 15Mbps，Max 60Mbps</item>
+        <item>Suggest 7Mbps，Max 30Mbps</item>
+        <item>Suggest 3Mbps，Max 15Mbps</item>
+    </string-array>
+    <string-array name="select_media">
+        <item>Video</item>
+        <item>Picture</item>
+    </string-array>
+
+    <string-array name="mimo_select_media">
+        <!--<item>全部内容</item>-->
+        <item>Video</item>
+        <!--<item>图片</item>-->
+    </string-array>
+    <string-array name="videoEdit">
+        <item>@string/glitch</item>
+        <item>@string/filter</item>
+        <item>@string/caption</item>
+        <item>@string/comcaption</item>
+        <item>@string/animatedSticker</item>
+        <item>@string/music</item>
+        <item>@string/animation</item>
+        <item>@string/transition</item>
+        <item>@string/watermark</item>
+    </string-array>
+
+    <string-array name="edit_function_tips">
+        <item>@string/prompt</item>
+        <item>@string/stayTuned</item>
+        <item>@string/contactBusiness</item>
+    </string-array>
+    <string-array name="transition_tips">
+        <item>@string/prompt</item>
+        <item>Single video cannot add transition</item>
+    </string-array>
+
+    <string-array name="compile_video_failed_tips">
+        <item>Compile failed</item>
+        <item>Please check the storage space.</item>
+    </string-array>
+    <string-array name="compile_video_success_tips">
+        <item>The path of saving: </item>
+    </string-array>
+    <string-array name="effectNamesVideo">
+        <item>@string/trim</item>
+        <item>@string/adjust</item>
+        <item>@string/copy</item>
+        <item>@string/background</item>
+        <item>@string/speed</item>
+        <item>@string/split</item>
+        <item>@string/volume</item>
+    </string-array>
+
+
+    <string-array name="effectNamesImage">
+        <item>@string/duration</item>
+        <item>@string/movement</item>
+        <item>@string/correctionColor</item>
+        <item>@string/filter</item>
+        <item>@string/copy</item>
+        <item>@string/delete</item>
+    </string-array>
+    <string-array name="animatedSticker_type">
+        <item>All</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string-array name="captionEdit">
+        <item>Style</item>
+        <item>Solid</item>
+        <item>Stroke</item>
+        <item>Background</item>
+        <item>Font</item>
+        <item>Spacing</item>
+        <item>Position</item>
+    </string-array>
+    <string-array name="pieced_caption">
+        <item>Rich word</item>
+        <item>Animation</item>
+        <item>Bubble </item>
+        <item>Solid</item>
+        <item>Stroke</item>
+        <item>Background</item>
+        <item>Font</item>
+        <item>Spacing</item>
+        <item>Position</item>
+    </string-array>
+
+
+    <string-array name="select_water">
+        <item>Static</item>
+        <item>Dynamic</item>
+    </string-array>
+    <string-array name="effect_list">
+        <item>None</item>
+        <item>Famale</item>
+        <item>Hall</item>
+        <item>Reverb</item>
+        <item>Wahwah</item>
+        <item>Male</item>
+        <item>Cartoon</item>
+        <item>Echo</item>
+        <item>Monster</item>
+    </string-array>
+    <string-array name="douyin_recorder_minduration_tips">
+        <item>@string/prompt</item>
+        <item>The duration of a single recording cannot be less than 0.5 seconds.</item>
+    </string-array>
+    <string-array name="sdk_version_tips">
+        <item>@string/prompt</item>
+        <item>Please move to the official website and contact the business person to request a version of the face recognition authorization.</item>
+    </string-array>
+    <string-array name="sdk_expire_tips">
+        <item>@string/prompt</item>
+        <item>Failed to initiate the arscene module.</item>
+    </string-array>
+    <string-array name="permissions_tips">
+        <item>@string/prompt</item>
+        <item>Please open the relevant permissions (camera, microphone, storage)</item>
+    </string-array>
+    <string-array name="clip_load_failed_tips">
+        <item>@string/prompt</item>
+        <item>Imported video is invalid, please re-select, please reselect</item>
+    </string-array>
+    <string-array name="douyin_return_tips">
+        <item>Give up the effects ?</item>
+        <item>Quit</item>
+        <item>Cancel</item>
+    </string-array>
+    <string-array name="select_video_min_duration_tips">
+        <item>@string/prompt</item>
+        <item>Please select a video material longer than 3 seconds</item>
+    </string-array>
+    <string-array name="super_zoom_resouce_tips">
+        <item>@string/prompt</item>
+        <item>The effect resource has not been downloaded, please download first</item>
+    </string-array>
+    <string name="color_adjust_single_color">Single</string>
+    <string name="color_adjust_multi_color">Multi</string>
+    <string name="color_adjust_intensity">Intensity</string>
+    <string name="color_adjust_density">Density</string>
+    <string name="asset_more_filter_search">Search filter name or UUID</string>
+
+    <string name="video_change_voice">Change Voice</string>
+    <string name="change_speed_practice">practice speed</string>
+    <string name="change_speed_curve">curve speed</string>
+
+    <string name="tv_point_add">add point</string>
+    <string name="tv_point_remove">remove point</string>
+    <string name="tv_custom">custom</string>
+    <string name="selected">Selected</string>
+    <string name="videos">Videos /</string>
+    <string name="video_">Video /</string>
+    <string name="photos">Photos</string>
+    <string name="photo_">Photo</string>
+    <string name="loading_now">Loading now …</string>
+    <string name="photo_duration">Photo Duration</string>
+    <string name="dlg_ok">OK</string>
+    <string name="click_to_edit">Edit</string>
+    <string name="filter_none">None</string>
+</resources>

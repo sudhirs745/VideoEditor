@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/theme_capture_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/theme_back"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_margin="@dimen/dp4.5"
+            android:padding="@dimen/dp5"
+            android:src="@mipmap/icon_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/theme_compile"
+            android:layout_width="@dimen/dp55"
+            android:layout_height="@dimen/dp27"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp9"
+            android:background="#4A90E2"
+            android:gravity="center"
+            android:text="导出"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/theme_bottom_layout"
+        android:layout_width="0dp"
+        android:layout_height="270dp"
+        android:background="#FF1A1A1A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rl_theme_clips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp62"
+            android:layout_marginBottom="@dimen/dp200"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_theme_sub_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:paddingBottom="@dimen/dp10"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/theme_tv_sub_tittle"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="#FF1A1A1A"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/theme_iv_sub_back"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp20"
+                android:layout_marginStart="@dimen/dp15"
+                android:layout_marginLeft="@dimen/dp15"
+                android:padding="@dimen/dp5"
+                android:src="@mipmap/icon_back"
+                app:layout_constraintBottom_toBottomOf="@+id/theme_tv_sub_tittle"
+                app:layout_constraintStart_toStartOf="@+id/theme_tv_sub_tittle"
+                app:layout_constraintTop_toTopOf="@+id/theme_tv_sub_tittle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/theme_edit_recycler"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingTop="7dp"
+                app:layout_constraintBottom_toTopOf="@+id/theme_filter_seek"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/theme_tv_sub_tittle" />
+
+
+            <SeekBar
+                android:id="@+id/theme_filter_seek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp50"
+                android:layout_marginRight="@dimen/dp50"
+                android:layout_marginBottom="@dimen/dp5"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:progressDrawable="@drawable/blue_progress_seekbar"
+                android:thumb="@drawable/custom_duration_seekbar_ball"
+                app:layout_constraintBottom_toTopOf="@+id/theme_filter_recycler" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/theme_filter_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginLeft="@dimen/dp15"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.glitchcam.vepromei.themeshoot.view.ThemePlayView
+        android:id="@+id/theme_play_view"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        app:layout_constraintBottom_toTopOf="@+id/theme_bottom_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.glitchcam.vepromei.themeshoot.view.ThemePreviewLiveWindow
+        android:id="@+id/theme_preview_live"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/theme_play_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/theme_capture_top" />
+</androidx.constraintlayout.widget.ConstraintLayout>

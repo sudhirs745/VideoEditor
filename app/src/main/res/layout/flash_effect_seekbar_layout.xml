@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTranslucent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="#1D1F26">
+
+        <TextView
+            android:id="@+id/glitter_seekTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/exposure"
+            android:textColor="@color/ccffffff"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+        <SeekBar
+            android:id="@+id/glitter_seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="43dp"
+            android:focusable="true"
+            android:maxHeight="2dp"
+            android:progressDrawable="@drawable/seekbar" />
+
+        <TextView
+            android:id="@+id/glitter_seekProgress_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/glitter_seekBar"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-20dp"
+            android:text="0.0"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/glitter_seekProgress_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/glitter_seekBar"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="-20dp"
+            android:text="1.0"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/glitter_seekProgress_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/glitter_seekBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp10"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</RelativeLayout>

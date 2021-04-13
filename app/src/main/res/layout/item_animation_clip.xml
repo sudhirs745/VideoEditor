@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/assetItem"
+    android:layout_width="@dimen/dp80"
+    android:layout_height="@dimen/dp80"
+    android:layout_marginEnd="8dp"
+    android:background="@drawable/rounded_border">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="2dp">
+
+        <ImageView
+            android:id="@+id/imageAsset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/default_theme"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/nameAsset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dp12"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="6dp"
+        android:textColor="@color/white" />
+
+    <View
+        android:id="@+id/view_frame"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/activity_animation_clip_selected_animation" />
+
+</FrameLayout>

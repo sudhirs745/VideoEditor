@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--调节的item选项名字-->
+    <string-array name="adjust_menu_array">
+        <item>@string/brightness</item>
+        <item>@string/contrast</item>
+        <item>@string/saturation</item>
+        <item>@string/highlights</item>
+        <item>@string/color_shadow</item>
+        <item>@string/color_temperature</item>
+        <item>@string/tone</item>
+        <item>@string/color_fade</item>
+        <item>@string/degree</item>
+        <item>@string/sharpness</item>
+        <item>@string/hot_pixel</item>
+    </string-array>
+    <!--调节的item 图标icon -->
+    <array name="sub_adjust_menu_icon">
+        <item>@mipmap/adjust_brightness_bg</item>
+        <item>@mipmap/adjust_contrast_bg</item>
+        <item>@mipmap/adjust_saturation_bg</item>
+        <item>@mipmap/adjust_highlight_bg</item>
+        <item>@mipmap/adjust_shadow_bg</item>
+        <item>@mipmap/adjust_temperature_bg</item>
+        <item>@mipmap/adjust_tint_bg</item>
+        <item>@mipmap/adjust_fade_bg</item>
+        <item>@mipmap/adjust_degree_bg</item>
+        <item>@mipmap/adjust_amount_bg</item>
+        <item>@mipmap/adjust_hot_phxie_bg</item>
+    </array>
+    <!--调节的item 图标icon -->
+    <array name="sub_adjust_menu_icon_selected">
+        <item>@mipmap/adjust_brightness_bg_selected</item>
+        <item>@mipmap/adjust_contrast_bg_selected</item>
+        <item>@mipmap/adjust_saturation_bg_selected</item>
+        <item>@mipmap/adjust_highlight_bg_selected</item>
+        <item>@mipmap/adjust_shadow_bg_selected</item>
+        <item>@mipmap/adjust_temperature_bg_selected</item>
+        <item>@mipmap/adjust_tint_bg_selected</item>
+        <item>@mipmap/adjust_fade_bg_selected</item>
+        <item>@mipmap/adjust_degree_bg_selected</item>
+        <item>@mipmap/adjust_amount_bg_selected</item>
+        <item>@mipmap/adjust_hot_phxie_bg_selected</item>
+    </array>
+    <!--调整选择比例-->
+    <array name="adjudt_ration">
+        <item>@mipmap/adjudt_ration_free</item>
+        <item>@mipmap/adjudt_ration_9v16</item>
+        <item>@mipmap/adjudt_ration_3v4</item>
+        <item>@mipmap/adjudt_ration_9v18</item>
+        <item>@mipmap/adjudt_ration_9v21</item>
+        <item>@mipmap/adjudt_ration_1v1</item>
+        <item>@mipmap/adjudt_ration_16v9</item>
+        <item>@mipmap/adjudt_ration_4v3</item>
+        <item>@mipmap/adjudt_ration_18v9</item>
+        <item>@mipmap/adjudt_ration_21v9</item>
+    </array>
+    <array name="adjudt_ration_selected">
+        <item>@mipmap/adjudt_ration_free_selected</item>
+        <item>@mipmap/adjudt_ration_9v16_selected</item>
+        <item>@mipmap/adjudt_ration_3v4_selected</item>
+        <item>@mipmap/adjudt_ration_9v18_selected</item>
+        <item>@mipmap/adjudt_ration_9v21_selected</item>
+        <item>@mipmap/adjudt_ration_1v1_selected</item>
+        <item>@mipmap/adjudt_ration_16v9_selected</item>
+        <item>@mipmap/adjudt_ration_4v3_selected</item>
+        <item>@mipmap/adjudt_ration_18v9_selected</item>
+        <item>@mipmap/adjudt_ration_21v9_selected</item>
+    </array>
+
+</resources>

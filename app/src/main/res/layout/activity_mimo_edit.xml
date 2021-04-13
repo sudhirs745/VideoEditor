@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:SelectBottomMenu="http://schemas.android.com/apk/res-auto"
+    tools:context=".mimo.MimoEditActivity"
+    android:background="@color/story_activity_back_color">
+    <com.glitchcam.vepromei.edit.view.CustomTitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_titleBar_height">
+    </com.glitchcam.vepromei.edit.view.CustomTitleBar>
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:id="@+id/videoLayout"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/video_layout_height">
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="@dimen/edit_hint_text_margin_top"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/videoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/edit_hint"
+        android:textSize="@dimen/edit_hint_text_size"
+        android:visibility="gone"/>
+
+
+    <com.glitchcam.vepromei.mimo.view.SelectBottomMenu
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_bottom_menu_height"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/edit_bottom_menu_padding_left"
+        android:paddingRight="@dimen/edit_bottom_menu_padding_right"
+        android:layout_marginBottom="@dimen/edit_bottom_menu_margin_bottom"
+        SelectBottomMenu:item_padding_left = "@dimen/edit_bottom_menu_item_padding_left"
+        SelectBottomMenu:item_padding_right = "@dimen/edit_bottom_menu_item_padding_right">
+    </com.glitchcam.vepromei.mimo.view.SelectBottomMenu>
+
+    <RelativeLayout
+        android:id="@+id/compilePage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/edit_switch_layout_margin_bottom"
+        android:layout_marginRight="@dimen/edit_switch_layout_margin_right"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_switch_water_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_open_last_water"
+            android:textColor="@color/white"
+            android:textSize="@dimen/edit_switch_hint_text_size" />
+        <Switch
+            android:layout_toRightOf="@+id/tv_switch_water_hint"
+            android:layout_marginLeft="@dimen/edit_switch_margin_left"
+            android:id="@+id/switch_water_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_track" />
+    </RelativeLayout>
+</RelativeLayout>

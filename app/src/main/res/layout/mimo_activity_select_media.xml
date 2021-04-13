@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ff1a1d24"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.glitchcam.vepromei.mimodemo.common.view.CustomTitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.glitchcam.vepromei.mimodemo.common.view.CustomTitleBar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_select_media"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ff363738"
+            app:tabIndicatorColor="@color/msff2a7dff"
+            app:tabSelectedTextColor="@color/msff2a7dff"
+            app:tabTextColor="@color/white"
+            app:tabTextAppearance="@style/tabLayoutTextStyle">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_select_media"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <com.glitchcam.vepromei.mimodemo.mediapaker.view.SelectBottomMenu
+            android:id="@+id/bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+        </com.glitchcam.vepromei.mimodemo.mediapaker.view.SelectBottomMenu>
+    </LinearLayout>
+
+    <include layout="@layout/dynamic_pop_select_makesize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:id="@+id/waitLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:indeterminateDrawable="@drawable/nv_loading"
+            android:indeterminateBehavior="repeat"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>
